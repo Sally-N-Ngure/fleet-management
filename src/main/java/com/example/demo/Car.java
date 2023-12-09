@@ -19,10 +19,5 @@ public class Car {
     private String name;
     private String features;
 
-
-    public void setId(Long id) {
-    }
-
-    // Constructors, getters, and setters
 }
 
