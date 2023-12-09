@@ -23,7 +23,7 @@ public class CarService {
         return carRepository.findById(id).orElseThrow();
     }
 
-    // search by first Name
+     // search by car name
 //    public List<Car> getByFirstName(String name){
 //        return carRepository.findByFirstName(name);
 //    }
