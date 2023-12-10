@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.service.CarService;
 import com.example.demo.model.Car;
+import org.hibernate.sql.Update;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -45,6 +46,12 @@ public class CarController {
     @GetMapping("/allCars")
     public List<Car> getCars(){
         return carService.getCars();
+    }
+
+    //UPDATE Record in database
+    @PutMapping("/update/{id}")
+    public Car updateCar(@RequestBody Car car, @PathVariable Long id){
+        return carService.updateCar(car,id);
     }
 
     //delete single car by Id of the car

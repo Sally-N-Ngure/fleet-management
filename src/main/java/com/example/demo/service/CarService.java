@@ -37,7 +37,15 @@ public class CarService {
         return carRepository.findAll();
     }
 
-    // delete car  (DELETE FROM DB)
+    // Update existing Car record (UPDATE TO DB).
+    public Car updateCar(Car car,long id){
+        Car currentCar = carRepository.findById(id).orElseThrow(); // capture non-existing id;
+        currentCar.setName(currentCar.getName());
+        currentCar.setFeatures(currentCar.getFeatures());
+        return carRepository.save(currentCar);
+    }
+
+    // delete car  (DELETE FROM DB).
     public String deleteCar(Long id){
         carRepository.deleteById(id);
         return "car id: " + id + " deleted";
