@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -18,10 +18,5 @@ public class Car {
     private String name;
     private String features;
 
-
-    public void setId(Long id) {
-    }
-
-    // Constructors, getters, and setters
 }
 
