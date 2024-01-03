@@ -1,4 +1,6 @@
 package com.example.demo;
+import com.example.demo.model.Car;
+import com.example.demo.repository.CarRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
@@ -17,11 +19,6 @@ public class CarService {
     public Car getSingleResident(Long id ){
         return carRepository.findById(id).orElseThrow();
     }
-
-    // search by first Name
-//    public List<Car> getByFirstName(String name){
-//        return carRepository.findByFirstName(name);
-//    }
 
     // get all Resident
     public List<Car> getAllResidents(){
